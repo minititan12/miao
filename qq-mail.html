@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            width: 100%;
+        }
+        #img{
+            background-image: url("/1.jpg");
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;          
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 0;
+            min-width: 500px;
+            z-index: -10;
+        }
+        header{
+            height: 80px;
+        }
+
+        header div.left{
+            width: 200px;
+            height: 100%;
+            /* border: 1px solid; */
+        }
+
+        header div.left img{
+            width: 50px;
+            padding-top: 15px;
+            padding-left: 50px;
+            filter: opacity(80%);
+            
+            
+        }
+
+        header div.center{
+            width: 150px;
+            /* min-width: 100px; */
+            height: 100%;
+            margin-left: 200px;
+            margin-top: -80px;
+        }
+
+        header div.center p{
+            margin: 0px;
+            padding-top: 10px;
+        }
+
+        header div.center a{
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.8);
+            font-weight: bolder;
+        }
+
+        header div.center a:hover{
+            border-bottom: 2px solid;
+        }
+
+        header div.right{
+            width: 30%;
+            /* margin-left: 350px;
+            margin-top:-80px;  */
+            float: right;
+            margin-top: -80px;
+            text-align: right;
+        }
+
+        header div.right a{
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 14px;
+            font-weight: bolder;
+        }
+
+        header .search input{
+            position: absolute;
+            right: 0;
+            top: 50px;
+        }
+
+        .aside{
+            width: 150px;
+            /* height:calc(100vh - 80px); */
+            height: 100%;
+            
+        }
+
+        .aside img{
+            display: block;
+            width: 25px;
+            padding-left: 35px;
+            margin-bottom: -25px;  
+        }
+
+        #fly{
+            
+            padding-left:30px;
+        } 
+
+        #chat{
+            padding-left: 20px;
+        }
+
+        hr{
+            width: 90%;
+            margin-top: 0px;
+            border: 2px solid rgba(215,196, 187,50%);
+            background-color:rgba(215,196, 187,50%);
+            border-radius: 10px;
+        }
+        
+        ul{
+            padding: 0px;
+        }
+
+        ul li{
+            list-style: none;
+        }
+
+        ul li a{
+            font-size: 15px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            margin-left: 5px;
+            margin-right: 10px;
+            /* color:rgba(129, 199, 212, 0.9); */
+            color: rgba(0, 0, 0, 0.8);
+            /* color: aqua; */
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+
+        #big li:nth-child(2) a{
+            margin-bottom: 4px;
+        }
+
+        #big li:nth-child(3) a{
+            padding-top: 7px;
+        }
+
+        ul li a:hover{
+            background-color: rgba(230, 169, 134, 0.5);
+        }
+
+
+        [class^="small"] li a{
+            padding: 0;
+            text-align: left;
+            padding-left: 20px;
+            font-size: 13px;
+            font-weight: bolder;
+        } 
+
+        .small-c li a{
+            color:rgba(27, 129, 62, 0.9);
+        }
+
+        .small-c li a:hover{
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+
+        .r-aside{
+            position: absolute;
+            top: 80px;
+            left: 150px;
+            width: calc(100% - 150px);
+            height: calc(100% - 80px);
+            /* height: 100%; */
+            box-sizing: border-box;
+            border-top: 4px solid rgba(206, 204, 203, 0.5);
+            border-left: 4px solid rgba(206, 204, 203, 0.5);
+            border-top-left-radius: 15px;
+            /* box-shadow: -5px -5px 8px rgba(85, 66, 54, 80%); */
+            background-color: #FCFAF2;
+            padding: 20px 0 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left"><img src="./get.png" alt="smail icon" title="smail"></div>
+        <div class="center">
+            <p><a href="www.baidu.com" target="_black">zhang@qq.com</a></p>
+            <p>
+                <a href="www.baidu.com" target="_black">邮箱首页</a>
+                <a href="www.baidu.com" target="_black">设置</a>|
+                <a href="www.baidu.com" target="_black">换肤</a>
+            </p>
+        </div>
+        <div class="right">
+            <a href="www.baidu.com" target="_black">反馈中心</a>|
+            <a href="www.baidu.com" target="_black">帮助</a>|
+            <a href="www.baidu.com" target="_black">退出</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="搜索">
+        </div>
+    </header>
+    <div id="img"></div>
+    <div class="aside">
+        <hr>
+        <ul id="big">
+            <li><img src="./write.png"/ id="write"><a href="http://www.baidu.com" target="_black"><strong>写信</strong></a></li>
+            <li><img src="./fly.png"/ id="fly"><a href="http://www.baidu.com"><strong>收信</strong></a></li>
+            <li><img src="./chat.png"/ id="chat"><a href="http://www.baidu.com"><strong>通讯录</strong></a></li>
+        </ul>
+        <hr>
+        <ul class="small">
+            <li><a href="http://www.mi.com" target="_black">收件箱</a></li>
+            <li><a href="http://www.mi.com" target="_black">星标邮件</a></li>
+            <li><a href="http://www.mi.com" target="_black">群邮件</a></li>
+            <li><a href="http://www.mi.com" target="_black">草稿箱</a></li>
+            <li><a href="http://www.mi.com" target="_black">已发送</a></li>
+            <li><a href="http://www.mi.com" target="_black">已删除</a></li>
+            <li><a href="http://www.mi.com" target="_black">垃圾箱</a></li>
+            <li><a href="http://www.mi.com" target="_black">QQ邮件订阅</a></li>
+        </ul>
+        <hr>
+        <ul class="small-c">
+            <li><a href="http://www.baidu.com" target="_black">其他邮箱</a></li>
+        </ul>
+        <hr>
+        <ul class="small-c">
+            <li><a href="http://www.baidu.com" target="_black">记事本</a></li>
+            <li><a href="http://www.baidu.com" target="_black">附件收藏</a></li>
+            <li><a href="http://www.baidu.com" target="_black">文件中转站</a></li>
+            <li><a href="http://www.baidu.com" target="_black">阅读空间</a></li>
+        </ul>
+
+    </div>
+    <div class="r-aside">
+            Lorem ipsum dolor sit, amet .
+    </div>
+</body>
+</html>
