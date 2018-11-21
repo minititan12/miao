@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        label{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-image: url("./twitter.png");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            cursor: pointer;
+           
+        }
+
+        input:checked + label{
+            background-position: -2800px 0;
+            transition: background-position 0.466666s steps(28,start);
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox"  id="heart" hidden>
+    <label for="heart"></label>
+</body>
+</html>
