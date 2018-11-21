@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li{
+            width: 600px;
+            height: 330px;
+            transition: 1s linear;
+            background-size: 600px;
+            background-repeat: no-repeat;
+
+        }
+
+        li.one{
+            background-image: url("http://www.08lr.cn/uploads/allimg/170513/1-1F513095057.jpg");
+            opacity: 0;
+            
+
+        }
+        li.two{
+            background-image: url("http://old.bz55.com/uploads/allimg/151016/139-1510161FI6.jpg");
+            margin-top: -330px;
+            opacity: 0;
+        }
+        li.three{
+            background-image: url("http://old.bz55.com/uploads/allimg/140701/1-140F1095639.jpg");
+            margin-top: -330px;
+            opacity: 0;
+        }
+        li.four{
+            background-image: url("http://www.kukud.net/fengjing/UploadFiles_8688/201408/20140819221256469.jpg");
+            margin-top: -330px;
+            opacity: 0;
+        }
+
+        #one:checked+input+input+input+ul li.one{
+            opacity: 1;
+        }
+
+        #two:checked+input+input+ul li.two{
+            opacity: 1;
+        }
+        #three:checked+input+ul li.three{
+            opacity: 1;
+        }
+        #four:checked+ul li.four{
+            opacity: 1;
+        }
+
+        .la label{
+            position:absolute;
+            z-index: 10;
+            top: 280px;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: rgba(255, 255, 251, 0.8);
+            background-color:rgba(120, 194, 196, 0.8);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+        }
+        .la label:nth-child(1){
+            left: 65px;
+        }
+        #one:checked+input+input+input+ul+div label:nth-child(1){
+            color: rgba(120, 194, 196, 0.8);
+            background-color: rgba(255, 255, 251, 0.8);
+            box-shadow: 0px 0px 0px 4px rgba(120, 194, 196, 0.5);
+        } 
+
+        .la label:nth-child(2){
+            left: 215px;
+        }
+
+        #two:checked+input+input+ul+div label:nth-child(2){
+            color: rgba(120, 194, 196, 0.8);
+            background-color: rgba(255, 255, 251, 0.8);
+            box-shadow: 0px 0px 0px 4px rgba(120, 194, 196, 0.5);
+        }
+
+        .la label:nth-child(3){
+            left: 365px;
+        }
+
+        #three:checked+input+ul+div label:nth-child(3){
+            color: rgba(120, 194, 196, 0.8);
+            background-color: rgba(255, 255, 251, 0.8);
+            box-shadow: 0px 0px 0px 4px rgba(120, 194, 196, 0.5);
+        }
+
+        .la label:nth-child(4){
+            left: 515px;
+        }
+
+        #four:checked+ul+div label:nth-child(4){
+            color: rgba(120, 194, 196, 0.8);
+            background-color: rgba(255, 255, 251, 0.8);
+            box-shadow: 0px 0px 0px 4px rgba(120, 194, 196, 0.5);
+        }
+
+        .line span{
+            display:inline-block;
+            position: absolute;
+            z-index: 2;
+            top: 8px;
+            height: 330px;
+            border-right: 2px solid rgba(255, 255, 255, 0.5);
+            box-sizing: border-box;
+        }
+
+        .line span:nth-child(1){
+            width: 150px;
+        }
+
+        .line span:nth-child(2){
+            width: 300px;
+        }
+
+        .line span:nth-child(3){
+            width: 450px;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="radio" id="one" name="pick" checked hidden>
+    <input type="radio" id="two" name="pick" hidden>
+    <input type="radio" id="three" name="pick" hidden>
+    <input type="radio" id="four" name="pick" hidden>
+      
+    <ul>
+        <li class="one"><span></span></li>
+        <li class="two"><span></span></li>
+        <li class="three"><span></span></li>
+        <li class="four"><span></span></li>
+    </ul>
+
+    <div class="la">
+        <label for="one">1</label>
+        <label for="two">2</label>
+        <label for="three">3</label>
+        <label for="four">4</label>
+    </div>
+
+    <div class="line">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    
+</body>
+</html>
