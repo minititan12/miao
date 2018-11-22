@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            height: 30px;
+            background-color: #0099cc;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+
+        .one{
+            position: relative;
+            left: 0;
+            right: 0;
+            width: 400px;
+            height: 30px;
+            margin: auto;
+            text-align: center;
+        }
+        .one>li{
+            display: inline-block;
+            position:absolute;
+            width: 100px;
+            height: 30px;
+            background-color: #0099cc;
+            color: white;
+            line-height: 30px;
+        }
+
+        .one>li.l1{
+            left:0px;
+        }
+
+        .one>li.l2{
+            left:25%;
+        }
+
+        .one>li.l3{
+            left: 50%;
+        }
+
+        .one>li.l4{
+            left: 75%;
+        }
+
+        li ul{
+            visibility: hidden;
+        }
+
+        li:hover{
+            background-color: #6699ff;
+            cursor: pointer;
+        }
+
+        li:hover>ul{
+            visibility: visible;
+        }
+
+        [class^="l"] li{
+            background-color: #6688ee;
+            font-size: smaller;
+            font-weight: bolder;
+        }
+
+        [class^="l"] li:hover{
+            background-color: blueviolet;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <ul class="one">
+            <li class="l1">首页</li>
+            <li class="l2">课程内容
+                <ul>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>python</li>
+                </ul>
+            </li>
+            <li class="l3">实验内容
+                <ul>
+                    <li>示例1</li>
+                    <li>示例2</li>
+                    <li>示例3</li>
+                </ul>
+            </li>
+            <li class="l4">关于我们
+                <ul>
+                    <li>网站历史</li>
+                    <li>企业文化</li>
+                    <li>联系方式</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
