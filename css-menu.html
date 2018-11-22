@@ -21,6 +21,8 @@
             height: 30px;
             margin: auto;
             text-align: center;
+            color: white;
+            line-height: 30px;
         }
         .one>li{
             display: inline-block;
@@ -28,28 +30,27 @@
             width: 100px;
             height: 30px;
             background-color: #0099cc;
-            color: white;
-            line-height: 30px;
         }
 
-        .one>li.l1{
+        .one>li:nth-child(1){
             left:0px;
         }
 
-        .one>li.l2{
+        .one>li:nth-child(2){
             left:25%;
         }
 
-        .one>li.l3{
+        .one>li:nth-child(3){
             left: 50%;
         }
 
-        .one>li.l4{
+        .one>li:nth-child(4){
             left: 75%;
         }
 
         li ul{
             visibility: hidden;
+            transition: 0.5s 0.1s linear;
         }
 
         li:hover{
@@ -61,14 +62,29 @@
             visibility: visible;
         }
 
-        [class^="l"] li{
+        ul[class^="l"] li{
+            position: relative;
             background-color: #6688ee;
             font-size: smaller;
             font-weight: bolder;
         }
 
-        [class^="l"] li:hover{
+        ul[class^="l"] li:hover{
             background-color: blueviolet;
+        }
+
+        ul[class^="t"]>li{
+            position: absolute;
+            left: 100%;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        ul[class^="t"]>li:nth-child(1){
+            top: 0;
+        }
+        ul[class^="t"]>li:nth-child(2){
+            top:100%;
         }
     </style>
 
@@ -76,23 +92,33 @@
 <body>
     <div>
         <ul class="one">
-            <li class="l1">首页</li>
-            <li class="l2">课程内容
-                <ul>
+            <li>首页</li>
+            <li>课程内容
+                <ul class="l1">
                     <li>Java</li>
                     <li>C++</li>
-                    <li>python</li>
+                    <li>python
+                        <ul class="t1">
+                            <li>教程</li>
+                            <li>视频</li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
-            <li class="l3">实验内容
-                <ul>
+            <li>实验内容
+                <ul class="l2">
                     <li>示例1</li>
-                    <li>示例2</li>
+                    <li>示例2
+                        <ul class="t2">
+                            <li>11-09</li>
+                            <li>11-22</li>
+                        </ul>
+                    </li>
                     <li>示例3</li>
                 </ul>
             </li>
-            <li class="l4">关于我们
-                <ul>
+            <li>关于我们
+                <ul class="l3">
                     <li>网站历史</li>
                     <li>企业文化</li>
                     <li>联系方式</li>
