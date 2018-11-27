@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{
+        background-color: rgba(0,0,0,0.3);
+    }
+    .outline{
+        width: 200px;
+        height: 200px;
+        /* background-color: aquamarine; */
+        border: 1px solid red;
+        box-sizing: border-box;
+    }
+    .ct{
+        width: 100px;
+        height: 100px;
+        border: 1px solid blue;
+        box-sizing: border-box;
+    }
+
+
+    /* 绝对定位 */
+    .e1{
+        position: relative;
+    }
+    .d1{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+    }
+
+
+    /* 绝对定位top50%和left50%，再把中间块margin负值本身的一半宽高 */
+    .e2{
+        position: relative;
+    }
+    .d2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+    }
+
+    /* margin填充 */
+    .d3{
+        margin: 50px;
+    }
+
+
+    /* 行内块元素通过text-align水平居中
+    通过line-height等于包含块高以及
+    用vertical-align等于middle使垂直对齐于基线
+    */
+    .e4{
+        text-align: center;
+        /* 要在父元素中声明line-height */
+        line-height: 200px;
+    }
+    .d4{
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+
+    /* 表格居中 */
+    .e5{
+        display: table;
+    }
+    .e5>div{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .d5{
+        margin: 0 auto;
+    }
+
+    </style>
+</head>
+<body>
+    <h2>绝对定位</h2>
+    <div class="outline e1">
+        <div class="ct d1"></div>
+    </div>
+    <h2>绝对定位第二种方法</h2>
+    <div class="outline e2">
+        <div class="ct d2"></div>
+    </div>
+    <h2>margin填充</h2>
+    <div class="outline e3">
+        <div class="ct d3"></div>
+    </div>
+    <h2>行内块元素居中</h2>
+    <div class="outline e4">
+        <div class="ct d4"></div>
+    </div>
+    <h2>表格居中</h2>
+    <div class="outline e5">
+        <div>
+            <div class="ct d5"></div>
+        </div>
+    </div>
+</body>
+</html>
