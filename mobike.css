@@ -61,75 +61,7 @@ header{
 .nav ul li a{
     color: white;
 }
-.nav-hide{
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    right: 0;
-    width: 100%;
-    visibility: hidden;
-}
-.nav-hide ul{
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-    background-color: rgba(226, 61, 14, 0.9);
-    visibility: hidden;
-}
-.nav-hide ul span{
-    display: block;
-    border-top: 1px solid rgba(0,0,0,0.2);
-}
-.first-li{
-    height: 80px;
-}
-.nav-hide ul li:nth-child(n+2){
-    height: 55px;
-}
-.nav-hide ul li{
-    padding-left: 20px;
-}
-.nav-hide ul li a{
-    line-height: 55px;
-    color: white;
-}
-.nav-hide label{
-    display: block;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    height: 50px;
-    width: 50px;
-    /* background-color: red; */
-}
-.nav-hide label span{
-    display: block;
-    width: 20px;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    margin-left: auto;
-    margin-right: auto;
-}
-.s1{
-    transition: transform 0.5s linear;
-    margin-top: 14px;
-}
-.s2{
-    transition: transform 0.5s linear;
-    margin-top: 12px;
-}
-.nav-hide input:checked+ul{
-    visibility: visible;
-}
-.nav-hide input:checked~label span:nth-child(1){
-    transform-origin: 100% 50%;
-    transform: rotate(-45deg);
-}
-.nav-hide input:checked~label span:nth-child(2){
-    transform-origin: 100% 50%;
-    transform: rotate(45deg);
-}
+
 .bg{
     width: 100%;
     height: 58vw;
@@ -390,6 +322,9 @@ footer>div:nth-child(2){
     .key{
         margin-left: 0;
     } */
+    .nav-hide{
+        display: none;
+    }
 }
 @media (max-width:1060px){
     .nav{
@@ -399,7 +334,72 @@ footer>div:nth-child(2){
         visibility: hidden;
     }
     .nav-hide{
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        right: 0;
+        width: 100%;
+    }
+    .nav-hide ul{
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        width: 100%;
+        background-color: rgba(226, 61, 14, 0.9);
+        visibility: hidden;
+    }
+    .nav-hide ul span{
+        display: block;
+        border-top: 1px solid rgba(0,0,0,0.2);
+    }
+    .first-li{
+        height: 80px;
+    }
+    .nav-hide ul li:nth-child(n+2){
+        height: 55px;
+    }
+    .nav-hide ul li{
+        padding-left: 20px;
+    }
+    .nav-hide ul li a{
+        line-height: 55px;
+        color: white;
+    }
+    .nav-hide label{
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        height: 50px;
+        width: 50px;
+        /* background-color: red; */
+    }
+    .nav-hide label span{
+        display: block;
+        width: 20px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .s1{
+        transition: transform 0.5s linear;
+        margin-top: 14px;
+    }
+    .s2{
+        transition: transform 0.5s linear;
+        margin-top: 12px;
+    }
+    .nav-hide input:checked+ul{
         visibility: visible;
+    }
+    .nav-hide input:checked~label span:nth-child(1){
+        transform-origin: 100% 50%;
+        transform: rotate(-45deg);
+    }
+    .nav-hide input:checked~label span:nth-child(2){
+        transform-origin: 100% 50%;
+        transform: rotate(45deg);
     }
 }
 @media (min-width:680px) and (max-width:1060px){
