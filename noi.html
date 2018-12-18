@@ -95,7 +95,7 @@
 </script>
 
 <script id="ch0103/08" type="010308">
-    function degree(){
+    function degree(){ //度
         var f = parseFloat(prompt("please give me a number"));
         if(f >= -459.67){
             var c = (5*(f-32)/9).toFixed(5);
@@ -109,19 +109,121 @@
 </script>
 
 <script id="ch0103/09" type="010309">
-    var r = parseFloat(prompt("plear give a circle r"));
-    function diameter(r){
+    var r = parseFloat(prompt("please give a circle r"));
+    function diameter(r){ //直径
         var R = (2 * r).toFixed(4);
         return R;
     }
-    function perimeter(r){
+    function perimeter(r){ //周长
         var l = (2*(Math.PI)*r).toFixed(4);
         return l;
     }
-    function area(r){
+    function area(r){ //面积
         var a = ((Math.PI)*r*r).toFixed(4);
         return a;
     }
     console.log(diameter(r)+" "+perimeter(r)+" "+area(r));
+</script>
+
+<script id="ch0103/10" type="010310">
+    var a = parseFloat(prompt("please give a floating number"));
+    var b = parseFloat(prompt("please give a floating number"));
+    function parallel(x,y){ //平行
+        var R = (1/(1/x+1/y)).toFixed(2);
+        return R;
+    }
+    console.log(parallel(a,b));
+</script>
+
+<script id="ch0103/11" type="010311">
+    var a = parseFloat(prompt("please give a floating number"));
+    var b = parseFloat(prompt("please give a floating number"));
+    var answer = (a%b).toFixed(4);
+    console.log(answer);
+</script>
+
+<script id="ch0103/12" type="010312">
+    function V(r){
+        var v = (4/3*((Math.PI).toFixed(2))*r*r*r).toFixed(2);
+        return v;
+    }
+    function solution(){
+        var r = parseFloat(prompt("please give a floating number"));
+        if(r<0){
+            alert("please give a non-nagetive number");
+            solution();
+        }else{
+            console.log(V(r));
+        }
+    }
+    solution();
+</script>
+
+<script id="ch0103/13" type="010313">
+    var n = prompt("please write a number have three character");
+    console.log(n.charAt(2) + n.charAt(1) +n.charAt(0));
+</script>
+
+<script id="ch0103/14" type="010314">
+    var h = prompt("please write a number");
+    var r = prompt("please write a number");
+    function num(h,r){
+        var s = (Math.PI)*r*r;
+        var v = h*s/1000;
+        var n = 20%v;
+        var num;
+        if(n == 0){
+            num = parseInt(20/v);
+        }else{
+            num = parseInt(20/v)+1;
+        }
+        console.log(num);
+    }
+    num(h,r);
+</script>
+
+<script id="ch0103/15" type="010315">
+    function solution(){
+        var n = prompt("please write a number n");
+        var x = prompt("please write a number x");
+        var y = prompt("please write a number y");
+        if(y>n*x){
+            alert("please n*x>=y");
+            solution();
+        }else{
+            var m = y%x;
+            if(m > 0){
+                var t = parseInt(y/x)+1;
+            }else{
+                var t = parseInt(y/x);
+            }
+            console.log(n-t);
+        }
+    }
+    solution();
+</script>
+
+<script id="ch0103/16" type="010316">
+    var xa = prompt("please write a number xa");
+    var ya = prompt("please write a number ya");
+    var xb = prompt("please write a number xb");
+    var yb = prompt("please write a number yb");
+    var x = xa-xb;
+    var y = ya-yb;
+    var num = (Math.sqrt(x*x+y*y)).toFixed(3);
+    console.log(num);
+</script>
+
+<script id="ch0103/17" type="">
+    var x1 = prompt("please write a number xa");
+    var y1 = prompt("please write a number ya");
+    var x2 = prompt("please write a number xb");
+    var y2 = prompt("please write a number yb");
+    var x3 = prompt("please write a number xb");
+    var y3 = prompt("please write a number yb");
+    var x = xa-xb;
+    var y = ya-yb;
+    var num = (Math.sqrt(x*x+y*y)).toFixed(3);
+    console.log(num);
 </script>
 
