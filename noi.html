@@ -73,14 +73,55 @@
 <script id="ch0103/05" type="010305">
     var A = parseInt(prompt("please give me a integer"));
     var B = parseInt(prompt("please give me a integer again"));
-    var sum = A/B;
-    console.log(sum);
+    var answer = (A/B).toFixed(9);
+    console.log(answer);
 </script>
 
-<script id="ch0103/06" type="">
+<script id="ch0103/06" type="010306">
     var A = parseInt(prompt("please give me a integer"));
     var B = parseInt(prompt("please give me a integer again"));
-    var sum = A/B;
-    console.log(sum);
+    var answer = ((B/A)*100).toFixed(3);
+    console.log(answer +"%");
+</script>
+
+<script id="ch0103/07" type="010307">
+    var x = parseFloat(prompt("please give me a number"));
+    var a = parseFloat(prompt("please give me a number"));
+    var b = parseFloat(prompt("please give me a number"));
+    var c = parseFloat(prompt("please give me a number"));
+    var d = parseFloat(prompt("please give me a number"));
+    var f = (a*x*x*x +b*x*x +c*x +d).toFixed(7);
+    console.log(f);
+</script>
+
+<script id="ch0103/08" type="010308">
+    function degree(){
+        var f = parseFloat(prompt("please give me a number"));
+        if(f >= -459.67){
+            var c = (5*(f-32)/9).toFixed(5);
+            console.log(c);
+        }else{
+            alert("please give me a number is greater than -459.67");
+            degree();
+        }
+    }
+    degree();
+</script>
+
+<script id="ch0103/09" type="010309">
+    var r = parseFloat(prompt("plear give a circle r"));
+    function diameter(r){
+        var R = (2 * r).toFixed(4);
+        return R;
+    }
+    function perimeter(r){
+        var l = (2*(Math.PI)*r).toFixed(4);
+        return l;
+    }
+    function area(r){
+        var a = ((Math.PI)*r*r).toFixed(4);
+        return a;
+    }
+    console.log(diameter(r)+" "+perimeter(r)+" "+area(r));
 </script>
 
