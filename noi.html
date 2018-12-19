@@ -248,7 +248,22 @@
 </script>
 
 <script id="ch0104/01" type="010401">
-    
+    var n = Number(prompt("please write a number n"));
+    function judge(n){
+        if(n>=-(Math.pow(10,9))&&n<=Math.pow(10,9)){
+            if(n>0){
+                console.log("positive");
+            }else if(n==0){
+                console.log("zero");
+            }else{
+                console.log("negative");
+            }
+        }else{
+            alert("please write a new interger");
+            judge(n);
+        }
+    }
+    judge(n);
 </script>
 
 <script id="ch0104/02" type="010402">
