@@ -580,22 +580,39 @@
     
 </script>
 
-<script id="ch0104/20">
+<script id="ch0104/20" type="010420">
     var a = Number(prompt("please give me a number"));
     var b = Number(prompt("please give me a number"));
     var c = Number(prompt("please give me a number"));
     var x1;
     var x2;
-    var judge = b*b-4*a*c;
-    if(judge==0){
+    var delta = b*b-4*a*c;
+    
+    if(delta==0){
         x1 = (-b/(2*a)).toFixed(5);
         x2 = x1;
-    }
-    else if(judge>0){
-        x1 = ((-b+Math.sqrt(b*b-4*a*c))/(2*a)).toFixed(5);
-        x2 = ((-b-Math.sqrt(b*b-4*a*c))/(2*a)).toFixed(5);
+        console.log("x1=x2="+x1);
+    }else if(delta>0){
+        x1 = ((-b+Math.sqrt(delta))/(2*a)).toFixed(5);
+        x2 = ((-b-Math.sqrt(delta))/(2*a)).toFixed(5);
+        console.log("x1="+x1);
+        console.log("x2="+x2);
     }else{
-        
+        delta = -delta;
+        var x1real = -b/(2*a);
+        var x1imag = Math.sqrt(delta)/(2*a);
+        var x2real = -b/(2*a);
+        var x2imag = -Math.sqrt(delta)/(2*a);
+        if(x1imag<0){
+            console.log("x1="+x1real.toFixed(5)+x1imag.toFixed(5)+"i");
+        }else{
+            console.log("x1="+x1real.toFixed(5)+"+"+x1imag.toFixed(5)+"i");
+        }
+        if(x2imag<0){
+            console.log("x2="+x2real.toFixed(5)+x2imag.toFixed(5)+"i");
+        }else{
+            console.log("x2="+x2real.toFixed(5)+"+"+x2imag.toFixed(5)+"i");
+        }
     }
 </script>
 
