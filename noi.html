@@ -342,7 +342,7 @@
     }
 </script>
 
-<script id="ch0104/09">
+<script id="ch0104/09" type="010409">
     var n = Number(prompt("please give me a number"));
     if(n%3==0){
         console.log("3");
@@ -355,15 +355,263 @@
     }
 </script>
 
-<script id="ch0104/10">
+<script id="ch0104/10" type="010410">
+    var x = Number(prompt("please give me a number"));
+    var y = Number(prompt("please give me a number"));
+    if(x>=60&&y>=60||x<60&&y<60){
+        console.log(0);
+    }else{
+        console.log(1);
+    }
+</script>
+
+<script id="ch0104/11" type="010411">
+    function can(){
+        var n = Number(prompt("please give me a number"));
+        if(n>=1&&n<=7){
+            if(n==1||n==3||n==5){
+                console.log("NO");
+            }else{
+                console.log("YES");
+            }
+        }else{
+            alert("please write a number between 1 and 7");
+            can();
+        }
+    }
+    can();
+</script>
+
+<script id="ch0104/12" type="010412">
+    var m = Number(prompt("please give me a number"));
+    var tBike = 23 + 27 + m/3;
+    var tWalk = m/1.2;
+    if(tBike < tWalk){
+        console.log("Bike");
+    }else if(tWalk < tBike){
+        console.log("Walk");
+    }else{
+        console.log("All");
+    }
+</script>
+
+<script id="ch0104/13" type="010413"> //分段函数
+    function select(){
+        var n = Number(prompt("please give me a number"));
+        if(n>=0&&n<20){
+            subsection(n);
+        }else{
+            alert("please write a number between 0 and 20");
+            select();
+        }
+    }
+    function subsection(x){
+        var y;
+        if(x>=0&&x<5){
+            y=-x+2.5;
+        }else if(x>=5&&x<10){
+            y=2-1.5*(x-3)*(x-3);
+        }else if(x>=10&&x<20){
+            y=x/2-1.5;
+        }
+        console.log(y.toFixed(3));
+    }
+    select();
+</script>
+
+<script id="ch0104/14" type="010414">
+    var m;
+    function main(){
+        var k = Number(prompt("please give me a number"));
+        var b = prompt("please give me a char between y or n");
+        if(b=="y"||b=="n"){
+            judge(k);
+            fast(b);
+            console.log(m);
+        }else{
+            alert("please write a right char");
+            b="";
+            main();
+        }
+    }
+    function judge(x){
+        if(x<=1000){
+            m=8;
+        }else{
+            var t;
+            t=Math.ceil((x-1000)/500);
+            m=8+4*t;
+        }
+        return m;
+    }
+    function fast(x){
+        if(x =="y"){
+            m+=5;
+        }else if(x == "n"){
+            m=m;
+        }
+    }
+    main();
+</script>
+
+<script id="ch0104/15" type="010415">
+    var a = Number(prompt("please write a number"));
+    var b = Number(prompt("please write a number"));
+    var c = Number(prompt("please write a number"));
+    
+    if(a>b){
+        if(a>c){
+            console.log(a);
+        }else{
+            console.log(c);
+        }
+    }else{
+        if(b>c){
+            console.log(b);
+        }else{
+            console.log(c);
+        }
+    }
+</script>
+
+<script id="ch0104/16" type="010416">
+    var a = Number(prompt("please write a number"));
+    var b = Number(prompt("please write a number"));
+    var c = Number(prompt("please write a number"));
+    
+    if(a>b){
+        if(a>c){
+            if(a*a==b*b+c*c){
+                console.log("yes");
+            }else{
+                console.log("no");
+            }
+        }else{
+            if(c*c==b*b+a*a){
+                console.log("yes");
+            }else{
+                console.log("no");
+            }
+        }
+    }else{
+        if(b>c){
+            if(b*b==c*c+a*a){
+                console.log("yes");
+            }else{
+                console.log("no");
+            }
+        }else{
+            if(c*c==b*b+a*a){
+                console.log("yes");
+            }else{
+                console.log("no");
+            }
+        }
+    }
+     
+</script>
+
+<script id="ch0104/17" type="010417">
+    var year = Number(prompt("please give me a number"));
+    if(year%400==0){
+        console.log("Y");
+    }else if(year%4==0&&year%100!==0){
+        console.log("Y");
+    }else{
+        console.log("N");
+    }
     
 </script>
 
-<script id="ch0104/11">
+<script id="ch0104/18" type="010418">
+    var x = Number(prompt("please give me a number"));
+    var y = Number(prompt("please give me a number"));
+    var xExist;
+    var yExist;
+    if(x>=-1&&x<=1){
+        xExist = true;
+    }else{
+        xExist = false;
+    }
+    if(y>=-1&&y<=1){
+        yExist = true;
+    }else{
+        yExist = false;
+    }
+    if(xExist&&yExist){
+        console.log("yes");
+    }else{
+        console.log("no");
+    }
+</script>
+
+<script id="ch0104/19" type="010419">
+    var x = Number(prompt("please give me a number"));
+    var y = Number(prompt("please give me a number"));
+    var char = prompt("please choose a character from +,-,*,/");
+    var answer;
+    switch(char){
+        case "+":
+        answer = x+y;
+        break;
+        case "-":
+        answer = x-y;
+        break;
+        case "*":
+        answer = x*y;
+        break;
+        case "/":
+        answer = x/y;
+        break;
+    }
+    // if(char=="+"){
+    //     answer = x+y;
+    // }
+    // if(char == "-"){
+    //     answer = x-y;
+    // }
+    // if(char == "*"){
+    //     answer = x*y;
+    // }
+    // if(char == "/"){
+    //     answer = x/y;
+    // }
+    console.log(answer);
     
 </script>
 
-<script id="ch0104/12">
+<script id="ch0104/20">
+    var a = Number(prompt("please give me a number"));
+    var b = Number(prompt("please give me a number"));
+    var c = Number(prompt("please give me a number"));
+    var x1;
+    var x2;
+    var judge = b*b-4*a*c;
+    if(judge==0){
+        x1 = (-b/(2*a)).toFixed(5);
+        x2 = x1;
+    }
+    else if(judge>0){
+        x1 = ((-b+Math.sqrt(b*b-4*a*c))/(2*a)).toFixed(5);
+        x2 = ((-b-Math.sqrt(b*b-4*a*c))/(2*a)).toFixed(5);
+    }else{
+        
+    }
+</script>
+
+<script id="ch0104/21" type="010421">
+    var n = Number(prompt("please give me a number"));
+    var x = Number(prompt("please give me a number"));
+    var y = Number(prompt("please give me a number"));
+    var eat;
+    var remain;
+    eat = Math.ceil(y/x);
+    remain = n-eat;
+    console.log(remain);
+</script>
+
+<script id="ch0104/21">
+    // var n = Number(prompt("please give me a number"));
     
 </script>
 
