@@ -110,16 +110,17 @@
 
 <script id="ch0103/09" type="010309">
     var r = parseFloat(prompt("please give a circle r"));
+    var pi = 3.14159;
     function diameter(r){ //直径
         var R = (2 * r).toFixed(4);
         return R;
     }
     function perimeter(r){ //周长
-        var l = (2*(Math.PI)*r).toFixed(4);
+        var l = (2*pi*r).toFixed(4);
         return l;
     }
     function area(r){ //面积
-        var a = ((Math.PI)*r*r).toFixed(4);
+        var a = (pi*r*r).toFixed(4);
         return a;
     }
     console.log(diameter(r)+" "+perimeter(r)+" "+area(r));
