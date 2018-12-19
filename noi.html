@@ -267,46 +267,103 @@
 </script>
 
 <script id="ch0104/02" type="010402">
-    
+    var a = Number(prompt("please write a number"));
+    if(a>=0){
+        console.log(a);
+    }else{
+        console.log(-a);
+    }
 </script>
 
 <script id="ch0104/03" type="010403">
-    
+    function judge(){
+        var n = Number(prompt("please write a number"));
+        if(n < 0){
+            alert("please write a number greater than zero");
+            judge();
+        }else{
+            if(n%2==0){
+                console.log("even");
+            }else{
+                console.log("odd");
+            }
+        }
+    }
+    judge();
 </script>
 
 <script id="ch0104/04" type="010404">
-    
+    var n = prompt("please write a character");
+    var m = n.charCodeAt();
+    if(m%2==0){
+        console.log("NO");
+    }else{
+        console.log("YES");
+    }
 </script>
 
 <script id="ch0104/05" type="010405">
-    
+    var x = Number(prompt("please give me a number"));
+    var y = Number(prompt("please give me a number"));
+    if(x>y){
+        console.log(">");
+    }else if(x==y){
+        console.log("=");
+    }else{
+        console.log("<");
+    }
 </script>
 
 <script id="ch0104/06" type="010406">
-    
+    var x = Number(prompt("please give me a number"));
+    if(x>=10&&x<=99){
+        console.log(1);
+    }else{
+        console.log(0);
+    }
 </script>
 
 <script id="ch0104/07" type="010407">
-    
+    var x = Number(prompt("please give me a number"));
+    var y = Number(prompt("please give me a number"));
+    if(x>=10||y>=20){
+        console.log(1);
+    }else{
+        console.log(0);
+    }
 </script>
 
 <script id="ch0104/08" type="010408">
+    var n = Number(prompt("please give me a number"));
+    if(n%3==0&&n%5==0){
+        console.log("YES");
+    }else{
+        console.log("NO");
+    }
+</script>
+
+<script id="ch0104/09">
+    var n = Number(prompt("please give me a number"));
+    if(n%3==0){
+        console.log("3"+" ");
+    }
+    if(n%5==0){
+        console.log("5"+" ");
+    }
+    if(n%7==0){
+        console.log("7");
+    }
+</script>
+
+<script id="ch0104/10">
     
 </script>
 
-<script id="ch0104/09" type="010409">
+<script id="ch0104/11">
     
 </script>
 
-<script id="ch0104/10" type="010410">
-    
-</script>
-
-<script id="ch0104/11" type="010411">
-    
-</script>
-
-<script id="ch0104/12" type="010412">
+<script id="ch0104/12">
     
 </script>
 
