@@ -580,7 +580,7 @@
     
 </script>
 
-<script id="ch0104/20">
+<script id="ch0104/20" type="010420">
     var a = Number(prompt("please give me a number"));
     var b = Number(prompt("please give me a number"));
     var c = Number(prompt("please give me a number"));
@@ -627,7 +627,287 @@
     console.log(remain);
 </script>
 
-<script id="ch0104/21">
+<script id="ch0105/01" type="010501"> //平均年龄
+    var total=0; 
+    var n = Number(prompt()); //人数
+    for(var i=0;i<n;i++){
+        total+=Number(prompt()); //根据n的值确定进行几次输入并统计总和
+    }
+    console.log((total/n).toFixed(2));
+</script>
+
+<script id="ch0105/02" type="010502">//月末结余平均值
+    var n = 12;
+    var total = 0;
+    for(var i = 0;i<n;i++){
+        total += Number(prompt());
+    }
+    var ave = (total/12).toFixed(2);
+    console.log("$"+ave);
+</script>
+
+<script id="ch0105/03" type="010503">
+    var total=0; 
+    var n = Number(prompt()); //样本容量
+    for(var i=0;i<n;i++){
+        total+=Number(prompt()); //根据n的值确定进行几次输入并统计总和
+    }
+    console.log((total/n).toFixed(4));
+</script>
+
+<script id="ch0105/04" type="010504">
+    var total=0; 
+    var n = Number(prompt()); //个数
+    for(var i=0;i<n;i++){
+        total+=Number(prompt()); //根据n的值确定进行几次输入并统计总和
+    }
+    console.log(total);
+    console.log((total/n).toFixed(5));
+</script>
+
+<script id="ch0105/05" type="010505">
+    var n = Number(prompt()); //人数
+    var high; //最高值
+    var score;
+    if(n>=1){
+        score = Number(prompt());//分数
+        high = score;
+    }else{
+        console.log("please write a number greater than 0");
+    }
+    for(var i=0;i<n-1;i++){
+        score = Number(prompt());//分数
+        if(score>high){
+            high = score;
+        }else{
+            high = high;
+        }
+    }
+    console.log(high);
+</script>
+
+<script id="ch0105/06" type="010506">
+    var n = Number(prompt());
+    var min;
+    var max;
+    if(n>=1){
+        min = Number(prompt());
+        max = min;
+    }else{
+        console.log("please write a number greater than 0");
+    }
+    for(var i = 0;i<n-1;i++){
+        var keep = Number(prompt());
+        if(keep<min){
+            min = keep;
+        }
+        if(keep>max){
+            max = keep;
+        }
+    }
+    var answer = max-min;
+    console.log(answer);
+</script>
+
+<script id="ch0105/07" type="010507">
+    var n = Number(prompt("day"));
+    var gTotal=0;
+    var sTotal=0;
+    var cTotal=0;
+    var total=0;
+    for (var i=0;i<n;i++){
+        var gold = Number(prompt("gold"));  //金牌 
+        var silver = Number(prompt("silver")); //银牌
+        var copper = Number(prompt("copper")); //铜牌
+        gTotal+=gold;
+        sTotal+=silver;
+        cTotal+=copper;
+        total +=gold+silver+copper;
+    }
+    console.log(gTotal);
+    console.log(sTotal);
+    console.log(cTotal);
+    console.log(total);
+</script>
+
+<script id="ch0105/08" type="010508">
+    var n = Number(prompt());
+    var degree;
+    var dTotal=0;
+    var total = (n-2)*180;
+    for(var i=0;i<n-1;i++){
+        degree=Number(prompt());
+        dTotal+=degree;
+    }
+    var answer = total-dTotal;
+    console.log(answer);
+</script>
+
+<script id="ch0105/09" type="010509">
+    var min = Number(prompt("min number"));
+    var max = Number(prompt("max number"));
+    var num=0;
+    for (var i=min;i<=max;i++){
+        if(i%2!==0){
+            num+=i;
+        }else{
+            num=num;
+        }
+    }
+    console.log(num);
+</script>
+
+<script id="ch0105/10" type="010510">
+    var min = Number(prompt("min number"));
+    var max = Number(prompt("max number"));
+    var num=0;
+    for (var i=min;i<=max;i++){
+        if(i%17==0){
+            num+=i;
+        }else{
+            num=num;
+        }
+    }
+    console.log(num);
+    
+</script>
+
+<script id="ch0105/11" type="010511">
+    var k = Number(prompt("how many number"));
+    var one=0;
+    var five=0;
+    var ten=0;
+    for (var i=0;i<k;i++){
+        var n = Number(prompt("number"));
+        if(n===1){
+            one++;
+        }
+        if(n===5){
+            five++;
+        }
+        if(n===10){
+            ten++;
+        }
+    }
+    console.log(one);
+    console.log(five);
+    console.log(ten);
+    
+    // var k = Number(prompt("how many number"));
+    // var oneNum=0;
+    // var fiveNum=0;
+    // var tenNum=0;
+    // for (var i=0;i<k;i++){
+    //     var n = Number(prompt("number"));
+    //     if(contrast(1,n)){
+    //         oneNum++;
+    //     }
+    //     if(contrast(5,n)){
+    //         fiveNum++;
+    //     }
+    //     if(contrast(10,n)){
+    //         tenNum++;
+    //     }
+    // }
+    // function contrast(x,u){
+    //     if(x===u){
+    //         return true;
+    //     }else{
+    //         return false;
+    //     }
+    // }
+    // console.log(oneNum);
+    // console.log(fiveNum);
+    // console.log(tenNum);
+</script>
+
+<script id="ch0105/12" type="010512">
+    var k = Number(prompt("how many number"));
+    var m = Number(prompt("which number to contrast"));
+    var count=0;
+    for (var i=0;i<k;i++){
+        var n = Number(prompt("number"));
+        if(n===m){
+            count++;
+        }
+    }
+    console.log(count);
+    
+</script>
+
+<script id="ch0105/13" type="010513">
+    var a = Number(prompt("number"));
+    var n = Number(prompt("number"));
+    var value = a;
+
+    for(var i = 0;i<n-1;i++){
+        value = value*a;
+    }
+    console.log(value);
+</script>
+
+<script id="ch0105/14" type="010514">
+    var x = Number(prompt("people"));
+    var n = Number(prompt("year"));
+    var end;
+    for(i=0;i<n;i++){
+        x=x*(1+(0.1/100));
+    }
+    console.log(x.toFixed(4));
+    
+</script>
+
+<script id="ch0105/15" type="010515">
+    var r = Number(prompt("rate"));  //年利率
+    var m = Number(prompt("money")); //资金总额
+    var y = Number(prompt("year")); //投资年份
+    for(i=0;i<y;i++){
+        m=m*(r/100+1);
+    }
+    console.log(Math.floor(m));
+</script>
+
+<script id="ch0105/16" type="010516">
+    var m = Number(prompt("money")); //工资
+    var k = Number(prompt("rate"));  //增长速度
+    var d=m;//存款
+    var y=1; //年份
+    var cost=200;
+    while(d<cost){   
+        cost=cost*(1+(k/100));
+        d=d+m;
+        y++;
+    }
+    console.log(y);
+</script>
+
+<script id="ch0105/17" type="010517">
+    var k = Number(prompt("money")); 
+    var before=1;
+    var after=1;
+    var num;
+    if(k==1||k==2){
+        num=1;
+    }
+    for(i=0;i<k-2;i++){
+        num = before+after;
+        before = after;
+        after = num;
+    }
+    console.log(num);
+</script>
+
+<script id="ch0105/18">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/01">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/01">
     // var n = Number(prompt("please give me a number"));
     
 </script>
