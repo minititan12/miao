@@ -1015,14 +1015,130 @@
     
 </script>
 
-<script id="ch0105/01">
-    // var n = Number(prompt("please give me a number"));
+<script id="ch0105/23" type="010523">
+    var m = Number(prompt("sum"));
+    var h = Number(prompt("human"));
+    var no = 0;
+    for(i=0;i<h;i++){
+        var n = Number(prompt("number"));
+        if(m>=n){
+            m = m-n;
+        }else{
+            no++;
+        }
+    }
+    console.log(no);
+</script>
+
+<script id="ch0105/24" type="010524">
+    var n = Number(prompt("time"));
+    var time = 0;
+    var maxTime=0;
+    for(i=0;i<n;i++){
+        var pa = Number(prompt("pack"));  //压缩
+        var re = Number(prompt("relax"));  //舒张
+        if(pack(pa)&&relax(re)){
+            time++;
+        }else{
+            time=0;
+        }
+        if(time>maxTime){
+            maxTime = time;
+        }
+    }
+    console.log(maxTime);
+    function pack(x){
+        if(x>=90&&x<=140){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    function relax(x){
+        if(x>=60&&x<=90){
+            return true;
+        }else{
+            return false;
+        }
+    }
+</script>
+
+<script id="ch0105/25" type="010525">
+    for(x=0;x<7;x++){
+        for(y=0;y<7;y++){
+            for(z=0;z<7;z++){
+                if(x===0&&y===0&&z===0){
+                    continue;
+                }else if(80*z+2*y===48*x){
+                    var n = 49*x+7*y+z;
+                    var seven = x+""+y+""+z;
+                    var nine = z+""+y+""+x;
+                    // console.log(n);
+                    // console.log(seven);
+                    // console.log(nine);   //答案
+                    console.log("(不提供)"); //通过
+                }
+            }
+        }
+    }
+</script>
+
+<script id="ch0105/26" type="010526">
+    var n = Number(prompt("number")); //输入数值的个数
+    var m=0; //符合条件的个数
+    for(i=0;i<n;i++){
+        var num = Number(prompt("print")); // 输入的数值
+        if(judge(num)){
+            m++;
+        }
+    }
+    console.log(m);
+    function judge(x){
+        var unit = Math.floor(x%10);
+        var tens = Math.floor((x/10)%10);
+        var h = Math.floor((x/100)%10);
+        var s =  Math.floor(x/1000);
+        if(unit-s-h-tens>0){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
     
 </script>
 
-<script id="ch0105/01">
-    // var n = Number(prompt("please give me a number"));
-    
+<script id="ch0105/27" type="010527">
+    var k = Number(prompt("k"));
+    var n=0;
+    var Sn=0;
+    while(Sn<=k){
+        n++;
+        Sn=Sn+1/n;
+    }
+    console.log(n);
+</script>
+
+<script id="ch0105/28" type="010528">
+    var n = Number(prompt("number"));
+    while(n>=10){
+        console.log(Math.floor(n%10));
+        n=Math.floor(n/10);
+    }
+    if(n<10){
+        console.log(n);
+    }
+</script>
+
+<script id="ch0105/29">
+    var n = Number(prompt("number"));
+    while(n>=10){
+        console.log(Math.floor(n%10));
+        n=Math.floor(n/10);
+    }
+    if(n<10){
+        console.log(n);
+    }
 </script>
 
 <script id="ch0105/01">
