@@ -897,7 +897,125 @@
     console.log(num);
 </script>
 
-<script id="ch0105/18">
+<script id="ch0105/18" type="010518">
+    var n = Number(prompt("n group"));
+    var oldx = Number(prompt("x1"));
+    var oldy = Number(prompt("y1"));
+    var p = oldy/oldx*100;
+    for(i=0;i<n-1;i++){
+        var newx = Number(prompt("case"));
+        var newy = Number(prompt("cure"));
+        judge(newx,newy);
+    }
+    function judge(x,y){
+        var v=(y/x)*100;
+        if(v-5>p){
+            console.log("better");
+        }else if(v+5<p){
+            console.log("worse");
+        }else{
+            console.log("same");
+        }
+    }
+    
+</script>
+
+<script id="ch0105/19" type="010519">
+    var n = Number(prompt("number"));
+    var allTime = 0;
+    if(n>=1){
+        var x1 = Number(prompt("x1number")); 
+        var y1 = Number(prompt("y1number"));
+        var h1 = Number(prompt("human1 number"));
+        allTime = time(x1,y1,h1);
+    }
+    for (i=0;i<n-1;i++){
+        var x = Number(prompt("xnumber")); 
+        var y = Number(prompt("ynumber"));
+        var h = Number(prompt("human number"));
+        allTime = allTime+time(x,y,h);
+    }
+    function time(x,y,h){
+        var time=0; //单次花费的时间
+        var rLength = Math.sqrt(x*x+y*y); //路途长度
+        var rTime = 2*rLength/50; //路上的时间
+        var udTime = h*(1+0.5);  //上下船的时间
+        time = rTime+udTime;
+        return time;
+    }
+    console.log(Math.ceil(allTime));
+    
+</script>
+
+<script id="ch0105/20" type="010520">
+    var h = Number(prompt("start high"));
+    var m = h; //经过的米数
+    for (i=0;i<9;i++){
+        h=h/2;
+        m=m+2*h;
+    }
+    console.log(m.toFixed(4));
+    console.log((h/2).toFixed(7));
+    
+</script>
+
+<script id="ch0105/21" type="010521">
+    var n = Number(prompt("number"));
+    while(n>1){
+        var m;  //暂存当前n值作为运算的初始值；
+        if(n%2==0){
+            m=n;
+            n=n/2;
+            console.log(m+"/"+"2"+"="+n);
+        }else{
+            m=n;
+            n=n*3+1;
+            console.log(m+"*"+"3"+"+"+"1"+"="+n);
+        }
+    }
+    console.log("End");
+</script>
+
+<script id="ch0105/22" type="010522">
+    var give = 0; //津津存下来的钱
+    var keep = 0; //津津留下来的钱
+    var month = 0; //月份
+    var j=0; //统计不够用的次数
+    for(i=1;i<=12;i++){
+        var imag = Number(prompt(imag));
+        month++;
+        var k = keep+300-imag;   //每月剩余
+        if(k>=0){
+            judge(k);
+        }else{
+            j++;
+            if(j===1){
+                console.log("-"+month);
+            }
+        }
+        if(j<1&&i===12){
+            console.log(keep+give*(1+0.2));
+        }
+    }
+    function judge(k){
+        var f = k/100;   //剩余的系数
+            if(f<1){
+                keep = k;
+            }else if(f>=1&&f<2){
+                keep = k-100;
+                give = give+100;
+            }else if(f>=2&&f<3){
+                keep = k-200;
+                give = give +200;
+            }else if(f>=3){
+                keep = k-300;
+                give = give +300;
+            }
+    }
+    
+</script>
+
+<script id="ch0105/01">
     // var n = Number(prompt("please give me a number"));
     
 </script>
