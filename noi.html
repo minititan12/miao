@@ -1064,6 +1064,7 @@
 </script>
 
 <script id="ch0105/25" type="010525">
+    var n = prompt("write");
     for(x=0;x<7;x++){
         for(y=0;y<7;y++){
             for(z=0;z<7;z++){
@@ -1121,28 +1122,136 @@
 
 <script id="ch0105/28" type="010528">
     var n = Number(prompt("number"));
-    while(n>=10){
+    while(n>=1){
         console.log(Math.floor(n%10));
         n=Math.floor(n/10);
     }
-    if(n<10){
-        console.log(n);
-    }
 </script>
 
-<script id="ch0105/29">
-    var n = Number(prompt("number"));
-    while(n>=10){
-        console.log(Math.floor(n%10));
+<script id="ch0105/29" type="010529">
+    var n = Number(prompt("number")); //输入的数字
+    var m = n; //输入数字的副本
+    var neg = false;  //是否为负数
+    var answer = "";
+    if(m<0){
+        n=-n;
+        neg = true;
+    }
+    while(n>=1){
+        answer = answer + Math.floor(n%10);
         n=Math.floor(n/10);
     }
-    if(n<10){
-        console.log(n);
+    negative(neg);
+    function negative(x){
+        if(x){
+            console.log("-"+parseInt(answer));
+        }else{
+            if(m===0){
+                console.log(0);
+            }else{
+                console.log(parseInt(answer));
+            }
+        }
+    }
+    
+</script>
+
+<script id="ch0105/30" type="010530">
+    var m = Number(prompt("m"));
+    var start = m;
+    var k = Number(prompt("k"));
+    var n = 0; //统计3的个数
+    while(m>1){
+        var three = Math.floor(m%10);
+        if(three===3){
+            n++;
+        }
+        m = Math.floor(m/10);
+    }
+    if(start%19===0&&n===k){
+        console.log("YES");
+    }else{
+        console.log("NO");
     }
 </script>
 
-<script id="ch0105/01">
+<script id="ch0105/31" type="asda">
+    var n = Number(prompt("n")); //灯数
+    var m = Number(prompt("m")); //人数
+    var light = "";
+    for(i=1;i<=m;i++){
+        for(j=0;j<n;j++){
+            light=light+"1";
+        }
+    }
+</script>
+
+<script id="ch0105/32">
+    
+    
+</script>
+
+<script id="ch0105/33">
     // var n = Number(prompt("please give me a number"));
     
 </script>
 
+<script id="ch0105/34">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/35">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/36">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/37">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/38">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/39">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/40">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/41">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/42">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/43">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/44">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
+
+<script id="ch0105/45">
+    // var n = Number(prompt("please give me a number"));
+    
+</script>
