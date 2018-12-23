@@ -1186,72 +1186,232 @@
     }
 </script>
 
-<script id="ch0105/32">
-    
+<script id="ch0105/32" type="010532"> 
+    var n = Number(prompt("n"));
+    var q;
+    var p;
+    var sum = 0;
+    var forQ=2;
+    var forP=1;
+    for(i=0;i<n;i++){
+        q = forQ;
+        p = forP;
+        sum = sum +q/p;
+        forQ = q+p;
+        forP = q;
+    }
+    console.log(sum.toFixed(4)); 
+</script>
+
+<script id="ch0105/33" type="010533">
+    var n = Number(prompt("n"));
+    var sum = 0;
+    for(i=1;i<=n;i++){
+        if(i%2===0){
+            sum = sum-1/i;
+        }else{
+            sum = sum+1/i;
+        }
+    }
+    console.log(sum.toFixed(4));
+</script>
+
+<script id="ch0105/34" type="010534">
+    var n = Number(prompt("n"));
+    var sum = 0;
+    var j=1;
+    for (i=1;i<=n;i++){
+        j = j*i;
+        if(i===1){
+            sum = 1;
+        }else{
+        sum = sum +j;
+        }
+    }
+    console.log(sum);
     
 </script>
 
-<script id="ch0105/33">
-    // var n = Number(prompt("please give me a number"));
+<script id="ch0105/35" type="010535">
+    var n = Number(prompt());
+    var e;
+    var j = 1;
+    var u;
+    if(n>=2){
+        e = 1;
+    }
+    for(i=1;i<=n;i++){
+        u = j*i;
+        e=e+1/u;
+        j=u;
+    }
+    console.log(e.toFixed(10));
     
 </script>
 
-<script id="ch0105/34">
-    // var n = Number(prompt("please give me a number"));
+<script id="ch0105/36" type="010536">
+    var x =Number(prompt("x"));
+    var n =Number(prompt("n"));
+    var sum;
+    var xsum=x;
+    if(n>=0){
+        sum = 1;
+    }
+    for(i=1;i<=n;i++){
+        sum = sum +xsum;
+        xsum = xsum*x;
+    }
+    if(n===0){
+        sum =1;
+    }
+    console.log(sum);
     
 </script>
 
-<script id="ch0105/35">
-    // var n = Number(prompt("please give me a number"));
-    
-</script>
-
-<script id="ch0105/36">
-    // var n = Number(prompt("please give me a number"));
-    
-</script>
-
-<script id="ch0105/37">
-    // var n = Number(prompt("please give me a number"));
+<script id="ch0105/37" type="sasd">
+    var m = Number(prompt("m"));
+    var n = Number(prompt("n"));
+    var x = Number(prompt("x"));
     
 </script>
 
 <script id="ch0105/38">
-    // var n = Number(prompt("please give me a number"));
     
 </script>
 
-<script id="ch0105/39">
-    // var n = Number(prompt("please give me a number"));
+<script id="ch0105/39" type="010539">
+    var n = Number(prompt("n"));
+    var sum = 0;
+    for(i=0;i<=n;i++){
+        var c = ""+i;
+        if(i%7!==0&&c.search("7")===-1){
+            sum=sum+i*i;
+        }else{
+            continue;
+        }
+    }
+    console.log(sum);    
+</script>
+
+<script id="ch0105/40" type="010540">
+    var n = Number(prompt("n"));
+    var sum = "";
+    var num;
+    for(i=1;i<=n;i++){
+        sum = sum+i;
+    }
+    num = sum.split("1").length-1;
+    console.log(num);
     
 </script>
 
-<script id="ch0105/40">
-    // var n = Number(prompt("please give me a number"));
+<script id="ch0105/41" type="010541">
+    var l =Number(prompt("l"));
+    var r = Number(prompt("r"));
+    var sum = "";
+    var num;
+    for(i=l;i<=r;i++){
+        sum = sum+i;
+    }
+    num = sum.split("2").length-1;
+    console.log(num);
+</script>
+
+<script id="ch0105/42" type="010542">
+    var w = Number(prompt("w"));
+    var h = Number(prompt("h"));
+    var char = prompt("char");
+    var n = Number(prompt("n"));
+    var answer = "";
+    for(i=0;i<h;i++){
+        if(i===0||i===h-1){
+            for(j=0;j<w;j++){
+                answer = answer +char;
+            }
+        }else{
+            for(m=0;m<w;m++){
+                if(n){
+                    answer = answer+char;
+                }else{
+                    if(m===0||m===w-1){
+                        answer = answer+char;
+                    }else{
+                        answer = answer+" ";
+                    }
+                }
+            }
+        }
+        answer = answer +"\n";
+    }
+    console.log(answer);
     
 </script>
 
-<script id="ch0105/41">
-    // var n = Number(prompt("please give me a number"));
-    
+<script id="ch0105/43" type="010543">
+    var n = Number(prompt());
+    var x;
+    var y;
+    for(i=2;i<n;i++){
+        for(j=2;j<n;j++){
+            if(i*j===n){
+                x=i;
+                y=j;
+            }
+        }
+    }
+    if(x>=y){
+        console.log(x);
+    }else{
+        console.log(y);
+    }
 </script>
 
-<script id="ch0105/42">
-    // var n = Number(prompt("please give me a number"));
-    
-</script>
-
-<script id="ch0105/43">
-    // var n = Number(prompt("please give me a number"));
-    
-</script>
-
-<script id="ch0105/44">
-    // var n = Number(prompt("please give me a number"));
+<script id="ch0105/44" type="010544">
+    var  n = Number(prompt("n"));
+    var  m = 0;
+    for(j=2;j<10000;j++){
+        if(zhishu(j)){
+            m++;
+            if(m===n){
+                console.log(j);
+                break;
+            }
+        }
+    }
+    function zhishu(x){
+        for(i=2;i<x;i++){
+            if(x%i===0){
+                return false;
+                break;
+            }else{
+                continue;
+            }
+        }
+        if(i>=x){
+            return true;
+        }
+        
+    }
     
 </script>
 
 <script id="ch0105/45">
-    // var n = Number(prompt("please give me a number"));
-    
+    var n =Number(prompt("n")); //天数
+    var gold = 1;
+    var goldtime = 0;
+    var time =1;   //分发的天数
+    var sum = 0;
+    while(time<=n){
+        for(i=0;i<gold;i++){
+            sum = sum +gold;
+            time++;
+            if(time-1===n){
+                console.log(sum);
+                break;
+            }
+        }
+        if(i===gold){
+            gold++;
+        }
+    }
 </script>
