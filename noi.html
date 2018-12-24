@@ -882,7 +882,7 @@
 </script>
 
 <script id="ch0105/17" type="010517">
-    var k = Number(prompt("money")); 
+    var k = Number(prompt("k")); 
     var before=1;
     var after=1;
     var num;
@@ -1108,6 +1108,22 @@
 
     
 </script>
+<!-- <script>
+    var n = +prompt();
+    var s1 = 0;
+    var s2 = 0;
+    for (var i = 1; i <= 100; i++) {
+        var m = i;
+        var m2 = m;
+        while (m2 != 0) {
+            if ((m2 % 7 == 0) || (m2 % 10 == 7)) {
+                console.log(m);
+                m2 = 0;
+            }
+            m2 = ~~(m2 / 10);
+        }
+    }
+</script> -->
 
 <script id="ch0105/27" type="010527">
     var k = Number(prompt("k"));
@@ -1175,13 +1191,19 @@
     }
 </script>
 
-<script id="ch0105/31" type="asda">
-    var n = Number(prompt("n")); //灯数
-    var m = Number(prompt("m")); //人数
-    var light = "";
-    for(i=1;i<=m;i++){
-        for(j=0;j<n;j++){
-            light=light+"1";
+<script id="ch0105/31">
+    var n = Number(prompt("n"));  //灯数
+    var m = Number(prompt("m"));  //人数
+    var turn; //灯被处理的次数
+    for(i=1;i<=n;i++){
+        turn = 0;
+        for(j=1;j<=m&&j<=n;j++){
+            if(i%j===0){
+                turn++;
+            }
+        }
+        if(turn%2!==0){
+            console.log(i);
         }
     }
 </script>
@@ -1275,8 +1297,8 @@
     
 </script>
 
-<script id="ch0105/38">
-    
+<script id="ch0105/38" type="010538">
+    var n = Number(prompt("n"));
 </script>
 
 <script id="ch0105/39" type="010539">
@@ -1353,16 +1375,29 @@
     var y;
     for(i=2;i<n;i++){
         for(j=2;j<n;j++){
-            if(i*j===n){
-                x=i;
-                y=j;
+            if(zhishu(i)&&zhishu(j)&&i*j===n){
+                if(i>=j){
+                    console.log(i);
+                }else{
+                    console.log(j);
+                }
+                i=n;
+                break;
             }
         }
     }
-    if(x>=y){
-        console.log(x);
-    }else{
-        console.log(y);
+    function zhishu(x){
+        for(e=2;e<x;e++){
+            if(x%e===0){
+                return false;
+                break;
+            }else{
+                continue;
+            }
+        }
+        if(e>=x){
+            return true;
+        }
     }
 </script>
 
@@ -1390,12 +1425,11 @@
         if(i>=x){
             return true;
         }
-        
     }
     
 </script>
 
-<script id="ch0105/45">
+<script id="ch0105/45" type="010545">
     var n =Number(prompt("n")); //天数
     var gold = 1;
     var goldtime = 0;
