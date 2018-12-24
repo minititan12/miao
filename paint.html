@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated'
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+</script>
+<script>
+  // YOUR CODE GOES BELOW
+  //画一条实线
+  for(i=0;i<400;i++){
+    dot(i,10,"red");
+  }
+  //画一条一个实点一个空点的虚线
+  for(i=0;i<400;i++){
+    if(i%2===0){
+      dot(i,20,"blue");
+    }
+  }
+
+  //画一条两个实点两个空点的虚线
+  
+  // var anum = 0;
+  // var nnum = 0;
+  // for(i=0;i<400;i++){
+  //   if(anum<2){
+  //     dot(i,30,"yellow");
+  //     anum++;
+  //   }
+  //   if(anum===2){
+  //     nnum++;
+  //   }
+  //   if(nnum===2){
+  //     anum = 0;
+  //     nnum = 0;
+  //   }
+  // }
+  var x = 0;
+  for(i=0;i<400;i++){
+    dot(x,30,"yellow");
+    dot(x+1,30,"yellow");
+    x=x+4;
+  }
+
+  //画一条三个实点两个空点的虚线
+  
+  // var threenum=0;
+  // var twonum = 0;
+  // for(b=0;b<400;b++){
+  // if(threenum<3){
+  //   dot(b,40,"green");
+  //   threenum++;
+  // }
+  // if(threenum===3){
+  //   twonum++;
+  // }
+  // if(twonum===2){
+  //   threenum = 0;
+  //   twonum = 0;
+  // }
+  // }
+  
+  var x = 0;
+  for(i=0;i<400;i++){
+    dot(x,40,"green");
+    dot(x+1,40,"green");
+    dot(x+2,40,"green");
+    x = x+5;
+  }
+
+  //画一条45度的斜线
+  for(c=0;c<400;c++){
+    dot(c,c,"tan");
+  }
+
+  //画一条跨越画布左上角和右下角的对角线
+  x = 0;
+  y = 0;
+  for(i=0;i<400;i++){
+    dot(x,y);
+    x+=1;
+    y+=3/4;
+  }
+
+  // 画一个空心矩形
+  var x = 100;
+  var y = 100;
+  for(i=0;i<400;i++){
+    if(y===100||y===150){
+      while(x<=150){
+        dot(x,y,"pink");
+        x++;
+      }
+      x=100;
+    }else if(y>100&&y<150){
+      dot(100,y,"pink");
+      dot(150,y,"pink");
+    }
+    if(y>150){
+      break;
+    }
+    y++;
+  }
+
+  // 画一个实心矩形
+  var x = 200;
+  var y = 200;
+  for(i=0;i<400;i++){
+    while(x<250){
+      dot(x,y);
+      x++;
+    }
+    x=200;
+    y++;
+    if(y>250){
+      break;
+    }
+  }
+
+  //画一个rgb色彩空间的某一面
+  var x = 200;
+  var y = 50;
+  for(i=0;i<400;i++){
+    while(x<250){
+      var r = (x-200)/50*256;
+      var g = (y-50)/50*256;
+      dot(x,y,"rgb("+r+","+g+","+"255)");
+      x++;
+    }
+    x=200;
+    y++;
+    if(y>100){
+      break;
+    }
+  }
+
+  //画一个空心的圆
+  var r = 50
+  for(var theta=0;theta<6.28;theta+=0.01){
+    var x = r*Math.sin(theta)+100;
+    var y = r*Math.cos(theta)+110;
+    dot(x,y);
+  }
+
+  // 画一个实心的圆
+
+
+  // 画一个大小合适的sin(x)的图像
+</script>
+</html>
