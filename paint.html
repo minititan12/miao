@@ -120,19 +120,16 @@
   // 画一个空心矩形
   var x = 100;
   var y = 100;
-  for(i=0;i<400;i++){
+  while(y<=150){
     if(y===100||y===150){
       while(x<=150){
         dot(x,y,"pink");
         x++;
       }
       x=100;
-    }else if(y>100&&y<150){
+    }else{
       dot(100,y,"pink");
       dot(150,y,"pink");
-    }
-    if(y>150){
-      break;
     }
     y++;
   }
