@@ -172,14 +172,28 @@
   //画一个空心的圆
   var r = 50
   for(var theta=0;theta<6.28;theta+=0.01){
-    var x = r*Math.sin(theta)+100;
-    var y = r*Math.cos(theta)+110;
+    var x = r*Math.cos(theta)+100;
+    var y = r*Math.sin(theta)+210;
     dot(x,y);
   }
 
   // 画一个实心的圆
+  for(i=50;i<=150&&i>=50;i++){
+    for(j=160;j<=260&&j>=160;j++){
+      var dis =Math.sqrt((i-100)*(i-100)+(j-210)*(j-210));
+      if(dis<r){
+        dot(i,j,"orange");
+      }
+    }
+  }
 
-
+  
   // 画一个大小合适的sin(x)的图像
+  for(i=0;i<=400;i++){
+    dot(i,Math.sin(i/8)*8+100)
+  }
+
+
+
 </script>
 </html>
