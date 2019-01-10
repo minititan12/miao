@@ -1,5 +1,8 @@
 var minititan12 = function(){
 
+    function chunk(ary,size){
+
+    }
     function compact(ary){
         var result = [];
         var len = ary.length;
@@ -10,6 +13,7 @@ var minititan12 = function(){
         }
         return result;
     }
+
     return {
         chunk:chunk,
         compact:compact,
