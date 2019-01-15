@@ -86,19 +86,17 @@ var minititan12 = function(){
     }
 
     function drop(ary,n){
+        let result = [];
         if(arguments.length == 0){
             return [];
         }
 
         let count = n||1;
 
-        for(i = count; i > 0; i--){
-            ary.shift();
-            if(ary.length == 0){
-                return ary;
-            }
+        for(i = count; i < ary.length; i++){
+            result.push(ary[i]);
         }
-        return ary;
+        return result;
     }
 
     function dropRight(ary,n){
@@ -117,6 +115,10 @@ var minititan12 = function(){
         return ary;
     }
 
+    function fill(ary,value,){
+
+    }
+
     return {
         chunk: chunk,
         compact: compact,
@@ -125,5 +127,6 @@ var minititan12 = function(){
         differenceBy: differenceBy,
         drop: drop,
         dropRight: dropRight,
+        fill: fill,
     }
 }()
