@@ -215,6 +215,7 @@ var minititan12 = function(){
         flattenDeep: flattenDeep,
         head: head,
         indexOf: indexOf,
-        initial: initial
+        initial: initial,
+        intersection: intersection,
     }
 }()
