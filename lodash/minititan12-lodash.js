@@ -87,32 +87,39 @@ var minititan12 = function(){
 
     function drop(ary,n){
         let result = [];
+
         if(arguments.length == 0){
             return [];
         }
 
-        let count = n||1;
+        let count = n;
+        if(arguments.length == 1){
+            count = 1;
+        }
 
         for(i = count; i < ary.length; i++){
             result.push(ary[i]);
         }
+
         return result;
     }
 
     function dropRight(ary,n){
+        let result = [];
+        
         if(arguments.length == 0){
             return [];
         }
 
-        let count = n||1;
-
-        for(i = count; i > 0; i--){
-            ary.pop();
-            if(ary.length == 0){
-                return ary;
-            }
+        let count = n;
+        if(arguments.length == 1){
+            count = 1;
         }
-        return ary;
+
+        for(i = 0; i < ary.length-count; i++){
+            result.push(ary[i]);
+        }
+        return result;
     }
 
     function fill(ary,value,){
