@@ -202,6 +202,74 @@ var minititan12 = function(){
         return result;
     }
 
+    //将array中的所有元素转换为由separator分隔的字符串
+    function join(ary = [],separator = ","){
+        let result = [];
+        for(let i = 0; i < ary.length; i++){
+            if(i == ary.length - 1){
+                result = result + ary[i];
+            }else{
+                result = result  + ary[i] + separator;
+            }
+        }
+        return result;
+    }
+
+    //获取array中的最后一个元素
+    function last(ary = []){
+        return ary[ary.length -1];
+    }
+
+    //获取array数组的第n个元素。如果n为负数，则返回从数组结尾开始的第n个元素
+    function nth(ary = [], n = 0){
+        let len = ary.length;
+        if(n < 0){
+            n = len + n;
+        }
+        for(let i = 0; i < len; i++){
+            if(i == n){
+                return ary[i];
+            }
+        }
+        return undefined;
+    }
+
+    //移除数组array中所有和给定值相等的元素，使用全等比较
+    function pull(ary = [],...values){
+        let value = [].concat(values);
+        for(let i = 0; i < value.length; i++){
+            for(let j = 0; j < ary.length; j++){
+                if(ary[j] === value[i]){
+                    del(ary,j);
+                    j--;
+                }
+            }
+        }
+        return ary;
+        function del(ary, n){
+            for(let i = 0; i < ary.length; i++){
+                if(i >= n){
+                    ary[i] = ary[i + 1];
+                }
+            }
+            ary.pop();
+            return ary;
+        }
+    }
+
+    //翻转数组
+    function reverse(ary = []){
+        let len = ary.length;
+        for(let i = len - 1; i >= 0; i--){
+            ary.push(ary[i]);
+        }
+
+        for(let i = 0; i < len; i++){
+            ary.shift();
+        }
+        return ary;
+    }
+
     return {
         chunk: chunk,
         compact: compact,
@@ -217,5 +285,10 @@ var minititan12 = function(){
         indexOf: indexOf,
         initial: initial,
         intersection: intersection,
+        join: join,
+        last: last,
+        nth: nth,
+        pull: pull,
+        reverse: reverse,
     }
 }()
